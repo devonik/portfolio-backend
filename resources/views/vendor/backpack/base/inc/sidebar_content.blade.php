@@ -4,3 +4,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('project') }}'><i class='nav-icon fa fa-question'></i> Projects</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('icon') }}'><i class='nav-icon fa fa-question'></i> Icons</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('career') }}'><i class='nav-icon fa fa-question'></i> Careers</a></li>

@@ -21,3 +21,7 @@ Route::prefix('projects')->name('projects/')->group(static function() {
     Route::get('/get', 'Api\ProjectsController@get');
 });
 
+Route::prefix('careers')->name('careers/')->group(static function() {
+    Route::get('/get', 'Api\CareersController@get');
+});
+

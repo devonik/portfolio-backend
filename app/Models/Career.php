@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Icon extends Model
+class Career extends Model
 {
     use CrudTrait;
 
@@ -15,7 +15,7 @@ class Icon extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'icons';
+    protected $table = 'careers';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -53,9 +53,11 @@ class Icon extends Model
     |--------------------------------------------------------------------------
     */
 
-    //Relation
-    public function careers()
+    /**
+     * The icons that belong to the project.
+     */
+    public function icon()
     {
-        return $this->hasMany(Career::class);
+        return $this->belongsTo(Icon::class);
     }
 }
