@@ -11,7 +11,7 @@ class CareersController
     public function get(){
         $careers = Career::all();
         foreach ($careers as $career){
-            $career['icon123'] = $career->icon;
+            $career['icon'] = $career->icon;
         }
         return $careers;
     }
