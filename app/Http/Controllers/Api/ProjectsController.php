@@ -9,7 +9,7 @@ use App\Models\Project;
 class ProjectsController
 {
     public function get(){
-        $projects = Project::all();
+        $projects = Project::query()->orderByDesc('updated_at')->get();
         foreach ($projects as $project){
             $project['icons'] = $project->icons;
         }
