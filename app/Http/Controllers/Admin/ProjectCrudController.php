@@ -32,6 +32,7 @@ class ProjectCrudController extends CrudController
     protected function setupListOperation()
     {
         $this->crud->addColumn(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
+        $this->crud->addColumn(['name' => 'priority', 'type' => 'number', 'label' => 'Priority']);
     }
 
     protected function setupCreateOperation()
@@ -73,6 +74,7 @@ class ProjectCrudController extends CrudController
         $this->crud->addField($icons_column_definition);
         $this->crud->addField($text_column_definition);
         $this->crud->addField(['name' => 'link', 'type' => 'url', 'label' => 'Link to Project']);
+        $this->crud->addField(['name' => 'priority', 'type' => 'number', 'label' => 'Priority']);
     }
 
     protected function setupUpdateOperation()
