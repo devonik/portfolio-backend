@@ -26,6 +26,10 @@ class Project extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
+    protected $casts = [
+        'link' => 'json',
+    ];
+
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS

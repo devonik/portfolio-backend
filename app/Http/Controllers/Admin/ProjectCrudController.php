@@ -67,13 +67,26 @@ class ProjectCrudController extends CrudController
             'label' => 'Text',
             'type' => 'wysiwyg'
         ];
+        //Multiple links
+        $links_column_definition = [   // Table
+            'name'            => 'link',
+            'label'           => 'Links',
+            'type'            => 'table',
+            'entity_singular' => 'link', // used on the "Add X" button
+            'columns'         => [
+                'title'  => 'Title',
+                'href'  => 'Href'
+            ],
+            'max' => 5, // maximum rows allowed in the table
+            'min' => 0, // minimum rows allowed in the table
+        ];
         $this->crud->setValidation(ProjectRequest::class);
         $this->crud->addField(['name' => 'title', 'type' => 'text', 'label' => 'Title']);
         $this->crud->addField(['name' => 'subtitle', 'type' => 'text', 'label' => 'Subtitle']);
         $this->crud->addField($image_column_definition);
         $this->crud->addField($icons_column_definition);
         $this->crud->addField($text_column_definition);
-        $this->crud->addField(['name' => 'link', 'type' => 'url', 'label' => 'Link to Project']);
+        $this->crud->addField($links_column_definition);
         $this->crud->addField(['name' => 'priority', 'type' => 'number', 'label' => 'Priority']);
     }
 
